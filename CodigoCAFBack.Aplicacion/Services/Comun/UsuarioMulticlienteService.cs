@@ -22,7 +22,6 @@ namespace CodigoCAFBack.Aplicacion.Services.Comun
         public string ObtenerCorreoParaCliente(Int32 ClienteId)
         {
             ResultadoClienteCorreo resultadoClienteCorreo = _usuarioMulticlienteRepository.ConsultarCorreoCliente(ClienteId);
-            resultadoClienteCorreo.CorreoElectronico = "danhy3421@gmail.com";
             if(resultadoClienteCorreo == null)
             {
                 throw new CodigoCAFExcepcion("No se encuentra el cliente " + ClienteId);
